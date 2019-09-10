@@ -1,9 +1,10 @@
 class KingdomsController < ApplicationController
+
   # GET /kingdoms
   def index
     @kingdoms = Kingdom.all
 
-    render json: @kingdoms.to_json(only: [:name,:id],
+    render json: @kingdoms.to_json(only: [:name,:id, :image],
                             include: [animals: { only: [:name]}])
   end
 
@@ -26,14 +27,6 @@ class KingdomsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /kingdoms/1
-  def update
-    if @kingdom.update(kingdom_params)
-      render json: @kingdom
-    else
-      render json: @kingdom.errors, status: :unprocessable_entity
-    end
-  end
 
   # DELETE /kingdoms/1
   def destroy
@@ -41,13 +34,9 @@ class KingdomsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_kingdom
-      @kingdom = Kingdom.find(params[:id])
-    end
 
     # Only allow a trusted parameter "white list" through.
     def kingdom_params
-      params.permit(:name)
+      params.permit(:name, :image)
     end
 end

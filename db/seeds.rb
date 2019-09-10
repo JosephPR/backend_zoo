@@ -5,15 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Animal.destroy_all
 Kingdom.destroy_all
+Animal.destroy_all
 
-Kingdom.create(name:"Amphibians")
-Kingdom.create(name:"Birds")
-Kingdom.create(name:"Fish")
-Kingdom.create(name:"Invertebrates")
-Kingdom.create(name:"Mammals")
-Kingdom.create(name:"Reptiles")
+Kingdom.create(name:"Amphibians", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAhkQQEhE8ik0l4MxuxshZeW4WM74fKe_2KyOJlOJ-5emFf0KFzg")
+Kingdom.create(name:"Birds", image: "https://thumbs-prod.si-cdn.com/83DQIwgykGY8VssIEYr8ft4SsPE=/800x600/filters:no_upscale()/https://public-media.si-cdn.com/filer/4a/9c/4a9c541a-4ee3-4844-b2c7-490530868a63/m1gr8h.jpg")
+Kingdom.create(name:"Fish", image: "https://i5.walmartimages.com/dfw/4ff9c6c9-6936/k2-_d3aaa0d9-93d0-481b-b982-e4a52eed2ac1.v1.jpg")
+Kingdom.create(name:"Invertebrates", image: "https://www.thoughtco.com/thmb/yZX8jG7MPBzkrYTcJ0_tlJ9at2I=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/114154091-57ac2f525f9b58974a68fdf3.jpg")
+Kingdom.create(name:"Mammals", image: "https://www.nationalgeographic.com/content/dam/animals/pictures/hero/mammals-hero.ngsversion.1498492837757.adapt.1900.1.jpg")
+Kingdom.create(name:"Reptiles", image: "https://carnegiemnh.org/wp-content/uploads/2018/10/chameleon-on-black.jpeg")
 
 Animal.create(name: "Bear", image: "https://process.images.nathab.com/A6dTpd53SmIg0pBfJJhgAz/resize=width:1224/quality=value:60/cache=expiry:31536000/compress/https://www.nathab.com/uploaded-files/carousels/HERO/Alaska-North/36-The-Great-Alaskan-Grizzly-Encounter.jpg", description:"Like Yogi", kingdom_id: 5)
 Animal.create(name: "Octopus", image: "https://daily.jstor.org/wp-content/uploads/2019/07/how_to_make_quicksand_like_an_octopus_1050x700.jpg", description:"Color changers", kingdom_id: 4)
